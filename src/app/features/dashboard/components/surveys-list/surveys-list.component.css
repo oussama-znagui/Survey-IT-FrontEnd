@@ -1,0 +1,10 @@
+.surveys-list-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 0%;
+    gap: 3rem;
+    flex-wrap: wrap;
+   
+
+}

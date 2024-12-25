@@ -1,0 +1,17 @@
+:host{
+    flex: 0 0 33.33%;  
+}
+.survey-details{
+    background: rgb(0,0,0);
+    background: linear-gradient(18deg, rgba(0,0,0,1) 0%, rgba(23,32,33,1) 27%, rgba(19,18,18,1) 63%, rgba(47,44,44,1) 100%);
+    border-radius: 1rem;
+    flex: 0 0 33.33%;  
+    border: 2h
+    px solid #FFD700	;
+    padding: 1rem 2rem;
+}
+.head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
