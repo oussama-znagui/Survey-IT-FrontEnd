@@ -1,10 +1,35 @@
-.surveys-list-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: 1 1 0%;
-    gap: 3rem;
-    flex-wrap: wrap;
-   
 
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+
+
+.surveys-list {
+    padding: 20px;
+    background-color: #1a1b1e;
+    min-height: 100vh;
+    color: #ffffff;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.surveys-list-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+@media (max-width: 768px) {
+    .surveys-list-container {
+        grid-template-columns: 1fr;
+    }
 }
