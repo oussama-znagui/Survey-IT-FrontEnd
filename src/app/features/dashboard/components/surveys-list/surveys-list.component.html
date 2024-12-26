@@ -5,15 +5,13 @@
         <app-add-button />
     </div>
     <div class="surveys-list-container">
-        <app-survey-details />
-        <app-survey-details />
-        <app-survey-details />
-        <app-survey-details />
-        <app-survey-details />
-        <app-survey-details />
-        <app-survey-details />
-        <app-survey-details />
-        <app-survey-details />
-        <app-survey-details />
+        @for(survey of surveys; track survey.id) {
+
+            <app-survey-details [survey]=  'survey'/>
+            } @empty {
+            <li>There are no items.</li>
+            }
+       
+      
     </div>
 </div>

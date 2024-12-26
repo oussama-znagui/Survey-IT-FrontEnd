@@ -39,26 +39,9 @@ h2 {
     font-weight: 500;
 }
 
-.editions-buttons {
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
-}
 
-button {
-    background-color: #2f3136;
-    border: none;
-    color: white;
-    padding: 6px 12px;
-    border-radius: 4px;
-    font-size: 14px;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-}
 
-button:hover {
-    background-color: #3a3c42;
-}
+
 
 @media (max-width: 768px) {
     .survey-details {

@@ -8,5 +8,5 @@ import { EditionDetailsComponent } from './features/dashboard/components/edition
 export const routes: Routes = [
     {path:'' , component:MainPageComponent},
     {path: 'surveys-list', component: SurveysListComponent},
-    {path: 'edition',component:  EditionDetailsComponent}
+    {path: 'edition/:id',component:  EditionDetailsComponent}
 ];
