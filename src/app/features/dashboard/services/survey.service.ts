@@ -9,7 +9,7 @@ import { map } from 'rxjs/operators';
 })
 export class SurveyService {
 
-  private url = 'http://localhost:8080/api/api/surveys';
+  private url = 'http://localhost:8080/api/surveys';
 
 
   constructor(private http:HttpClient) { }

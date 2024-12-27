@@ -1,3 +1,4 @@
+import { Chapter } from "./chapter";
 import { Survey } from "./survey";
 
 export interface Edition {
@@ -6,4 +7,5 @@ export interface Edition {
     start_date: Date;
     survey: Survey;
     year: number;
+    chapters: Chapter[];
 }

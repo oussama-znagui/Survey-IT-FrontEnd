@@ -15,28 +15,32 @@ import { error } from 'console';
 export class EditionDetailsComponent {
   id!: number;
   edition!: Edition
+  errorMessage: string | undefined;
+  
+
 
 constructor(private route: ActivatedRoute,private service: EditionService){
 
 }
 
-ngOnInit(){
+ngOnInit(): void {
+  console.log("hellooo");
+
   this.route.params.subscribe(params => {
     this.id = +params['id'];
-    this.getEditionData(this.id);
-  })
-
-  
+    this.loadEdition(this.id);
+  });
 }
 
-getEditionData(id: number){
-  this.service.getEditionDate(id).subscribe(
-    data => {this.edition = data;},
-  
-  error => {
-    console.log(error);
-  })
+loadEdition(id: number): void {
+  this.service.getEditionDate(id).subscribe({
+    next: (data) => {
+      this.edition = data;
+    },
+    error: (error) => {
+      console.error('Error fetching edition:', error);
+    }
+  });
 }
-
 
 }

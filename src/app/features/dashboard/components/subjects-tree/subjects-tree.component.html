@@ -1,1 +1,17 @@
-<p>subjects-tree works!</p>
+
+<ng-container *ngFor="let chapter of chapters">
+ 
+    <details *ngIf="chapter.subchapters && chapter.subchapters.length > 0">
+        <summary class="has-children">
+            {{ chapter.title }}
+        </summary>
+        <app-subjects-tree [chapters]="chapter.subchapters"></app-subjects-tree>
+    </details>
+
+   
+    <button 
+        *ngIf="!chapter.subchapters || chapter.subchapters.length === 0"
+        class="leaf-node">
+        {{ chapter.title }}
+    </button>
+</ng-container>

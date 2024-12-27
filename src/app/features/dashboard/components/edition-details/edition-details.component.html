@@ -1,5 +1,12 @@
-<h1>edition ID : {{edition.id}}</h1>
-<app-subjects-tree />
+<h1>edition ID : {{edition?.id}}</h1>
+<div class="container">
+    @for(chapter of edition.chapters; track chapter.id){
+       
+    }
+    <app-subjects-tree [chapters]= 'edition.chapters'/>
 
-<app-questions-list />
+    <app-questions-list  />
+</div>
+
+
 

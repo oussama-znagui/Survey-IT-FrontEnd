@@ -21,6 +21,7 @@ export class SurveysListComponent implements OnInit {
 
   ngOnInit(): void{
     console.log("bonjour")
+    
     this.service.getSurveys().subscribe({
       next:(data) => {
         this.surveys = data
