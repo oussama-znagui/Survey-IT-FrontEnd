@@ -1,1 +1,24 @@
-<p>questions-list works!</p>
+<div class="questions-container">
+    <div class="questions-header">
+        <h2>Questions</h2>
+        <button class="add-btn">Add Question</button>
+    </div>
+    
+    <div class="table-container">
+        <table class="questions-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Question</th>
+                    <th>Type</th>
+                    <th>Points</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (i of [1, 2, 3, 4, 5]; track i) {
+                    <tr app-question-item ></tr>
+                }            </tbody>
+        </table>
+    </div>
+</div>

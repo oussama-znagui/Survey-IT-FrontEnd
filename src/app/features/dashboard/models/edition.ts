@@ -5,5 +5,5 @@ export interface Edition {
     creation_date: Date;
     start_date: Date;
     survey: Survey;
-    years: number;
+    year: number;
 }

@@ -26,7 +26,8 @@ export class SurveysListComponent implements OnInit {
         this.surveys = data
       },
       error:(error) => {
-        console.log(error);
+        console.log("aloooooooooooo")
+        console.log(error );
         
       }
     })
