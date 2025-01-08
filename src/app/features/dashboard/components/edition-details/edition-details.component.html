@@ -1,0 +1,32 @@
+@if (edition) {
+    <h1>edition ID : {{edition.id}}</h1>
+    <p>Data from Child 1: {{ dataFromChild1().id }}</p>
+    <p>Data from Child 1: {{ a }}</p>
+    <h1>{{chapterQ.title}}</h1>
+    <div class="container">
+      @if (edition.chapters?.length) {
+        <app-subjects-tree  (chapterToSend)="receiveChapter($event)" [chapters]="edition.chapters"/>
+
+        
+        @if (!selectedQuestion()) {
+          <app-questions-list 
+            [chapter]="dataFromChild1()" 
+            (questionSelected)="onQuestionSelect($event)"
+          />
+        } @else {
+          <app-responses-list
+            [question]="selectedQuestion()"
+            (backClick)="onBackToQuestions()"
+          />
+        }
+      }
+    </div>
+  }
+  @else {
+    <p>Chargement...</p>
+  }
+  
+  @if (errorMessage) {
+    <p class="error">{{errorMessage}}</p>
+  }
+

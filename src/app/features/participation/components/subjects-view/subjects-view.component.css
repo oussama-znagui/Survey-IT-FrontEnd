@@ -1,0 +1,78 @@
+:host {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 1.5rem;
+    position: relative;
+  }
+  
+  /* Container pour la ligne de progression */
+  :host::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background-color: #e5e7eb;
+    z-index: 0;
+  }
+  
+  /* Style des boutons */
+  button {
+    position: relative;
+    padding: 2rem;
+    border-radius: 1rem;
+    background-color: white;
+    border: 2px solid #3b82f6;
+    color: #3b82f6;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 1;
+    margin: 0 10px;
+  }
+  
+  button:hover {
+    background-color: #3b82f6;
+    color: white;
+    transform: scale(1.1);
+  }
+  
+  button.active {
+    background-color: #3b82f6;
+    color: white;
+  }
+  
+
+  button::after {
+    content: attr(title);
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 8px;
+    font-size: 0.75rem;
+    white-space: nowrap;
+    color: #6b7280;
+  }
+  
+
+  app-subjects-view {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+  }
+  
+
+  @media (max-width: 640px) {
+    button {
+      width: 32px;
+      height: 32px;
+      font-size: 0.75rem;
+      margin: 0 5px;
+    }
+  
+    button::after {
+      font-size: 0.65rem;
+    }
+  }

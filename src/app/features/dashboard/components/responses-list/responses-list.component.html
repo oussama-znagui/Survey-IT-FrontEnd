@@ -1,0 +1,32 @@
+<div class="responses-container">
+    <div class="responses-header">
+      <button class="back-btn" (click)="onBack()">
+        ← Retour aux questions
+      </button>
+      <h2>Réponses pour la question: {{question?.text}}</h2>
+    </div>
+
+    <div class="table-container">
+      <table class="responses-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Réponse</th>
+            <th>Count</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for(answer of question?.answers; track answer.id){
+            <tr>
+            <app-response-item [answer]="answer" />
+          </tr>
+          }
+          <tr>
+            <app-add-response  [question]="question"/>
+          </tr>
+       
+        </tbody>
+      </table>
+    </div>
+  </div>

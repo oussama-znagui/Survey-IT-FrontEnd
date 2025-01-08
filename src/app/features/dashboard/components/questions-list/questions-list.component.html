@@ -1,0 +1,34 @@
+<div class="questions-container">
+    <div class="questions-header">
+      <h2>Questions du sujet {{ chapterID }}</h2>
+      <button class="add-btn">Add Question</button>
+    </div>
+  
+    <div *ngIf="chapter">
+      <h2>Questions pour {{ chapter.title }}</h2>
+    </div>
+  
+    <div class="table-container">
+      <table class="questions-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Question</th>
+            <th>Type</th>
+           
+            <th>Actions</th>
+          </tr>
+        </thead>
+        
+            <tbody>
+                <tr app-question-item 
+                    *ngFor="let question of chapter.questions" 
+                    [question]="question"
+                    (selectedQuesion)="onQuestionSelect(question)">
+                </tr>
+        
+          
+      </table>
+    </div>
+  </div>
+  

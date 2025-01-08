@@ -1,0 +1,35 @@
+:host{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: aliceblue;
+    padding: 2rem 3rem;
+    color: black;
+    border-radius: 1rem;
+    min-width:  33%;
+
+}
+form div{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    
+    
+}
+form input, select, textarea{
+    height: 2rem;
+    padding: .2rem .5rem;
+}
+
+button{
+    width: 33%;
+    height: 2rem;
+    border-radius: .5rem;
+    border: none;
+    background-color: #25262b;
+    color: white;
+    font-weight: bold;
+    
+
+}

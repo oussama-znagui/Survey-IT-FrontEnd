@@ -1,0 +1,10 @@
+@for(chapter of chapters; track chapter.id){
+    @if(chapter.questions && chapter.questions.length > 0){
+        <button>{{chapter.title}}</button>
+    }
+    
+    @if(chapter.subchapters && chapter.subchapters.length > 0){
+        <app-subjects-view [chapters]="chapter.subchapters"  />
+    }
+
+}

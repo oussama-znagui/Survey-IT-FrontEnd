@@ -1,0 +1,13 @@
+<td>Nouveau</td>
+<td>
+    <input
+    type="text"
+    [(ngModel)]="newAnswer.text"
+    placeholder="Texte de la réponse"
+    [disabled]="isLoading"
+  />
+</td>
+
+<td>
+  <button (click)="addAnswer()">Ajouter</button>
+</td>

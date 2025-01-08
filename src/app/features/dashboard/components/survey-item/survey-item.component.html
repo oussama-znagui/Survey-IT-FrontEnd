@@ -1,0 +1,13 @@
+<div class="survey-details">
+    <div class="head">
+        <h1>{{survey.title}}</h1>
+        <p>ID : {{survey.id}}</p>
+    </div>
+    <p>{{survey.description}}</p>
+    <div>
+        <h2>Editions : </h2>
+        <div class="editions-buttons">
+            <app-editions-list [editions]= "survey.editions"  />
+        </div>
+    </div>
+</div>
